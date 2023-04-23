@@ -1,8 +1,8 @@
 // import fetch from "node-fetch";
 // import swapi from "./script2.js";
 
-const fetch = require("node-fetch");
-const swapi = require("./script2");
+// const fetch = require("node-fetch");
+// const swapi = require("./script2");
 
 it("call swapi to get people", () => {
   expect.assertions(1);
@@ -10,14 +10,14 @@ it("call swapi to get people", () => {
   //   expect(data.count).toEqual(87);
   //   done();
   // });
-  return swapi.getPeople(fetch).then((data) => {
+  return swapi.getPeople().then((data) => {
     expect(data.count).toEqual(87);
   });
 });
 
 it("call swapi to get people with a promise", () => {
   expect.assertions(2);
-  return swapi.getPeoplePromise(fetch).then((data) => {
+  return swapi.getPeoplePromise().then((data) => {
     expect(data.count).toEqual(87);
     expect(data.results.length).toBeGreaterThan(5);
   });

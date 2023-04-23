@@ -1,7 +1,7 @@
 // const fetch = require("node-fetch");
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 
-const getPeoplePromise = (fetch) => {
+const getPeoplePromise = () => {
   return fetch("https://swapi.dev/api/people")
     .then((response) => response.json())
     .then((data) => {
@@ -13,7 +13,7 @@ const getPeoplePromise = (fetch) => {
     });
 };
 
-const getPeople = async (fetch) => {
+const getPeople = async () => {
   const getRequest = await fetch("https://swapi.dev/api/people");
   const data = await getRequest.json();
   // console.log("getpeople", data);
